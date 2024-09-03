@@ -1,0 +1,28 @@
+Questão 1:
+  C (comando de saaída "printf()")
+#include <stdio.h>
+
+int main()
+{
+    printf("Olá Mundo!");
+
+    return 0;
+}
+
+  Python (comando de saída "print ()")
+print("Olá Mundo!")
+
+Questão 2:
+#include <stdio.h>
+
+int main()
+{
+char nome[15];
+    printf("Digite seu nome: ");
+    scanf("%s",&nome);
+    printf("Bem vindo, %s!!",nome);
+    return 0;
+}
+
+Questão 3:
+

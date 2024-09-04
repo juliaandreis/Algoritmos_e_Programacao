@@ -1,1 +1,2 @@
-Repositório destinado à postagem de atividades de Algoritmos e Programação
+# Algoritmos e Programação
+Repositório destinado à postagem de atividades da Julia Renata Andreis.

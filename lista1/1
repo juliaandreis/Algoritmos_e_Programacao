@@ -11,33 +11,3 @@ int main()
 
   Python (comando de saída "print ()")
 print("Olá Mundo!")
-
-Questão 2:
-#include <stdio.h>
-
-int main()
-{
-char nome[15];
-    printf("Digite seu nome: ");
-    scanf("%s",&nome);
-    printf("Bem vindo, %s!!",nome);
-    return 0;
-}
-
-Questão 3:
-#include <stdio.h>
-
-int main()
-{
-    char nome[2];
-    printf("Qual é o verdadeiro nome do super-herói Batman?\n");
-    printf("a) Bruce Wayne  b) Clark Kent  c) Peter Parker  d) Tony Stark  e) Steve Rogers\n");
-    scanf("%s", nome);
-    printf("Você respondeu alternativa %s\n", nome);
-    printf("A resposta correta é a alternativa a");
-
-    return 0;
-}
-
-Questão 4
-

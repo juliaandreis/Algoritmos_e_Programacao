@@ -1,13 +1,20 @@
-Questão 1:
-  C (comando de saaída "printf()")
-#include <stdio.h>
+##Questão 1:
+###
 
-int main()
-{
-    printf("Olá Mundo!");
-
-    return 0;
-}
-
-  Python (comando de saída "print ()")
+###Python - comando de saída: print
 print("Olá Mundo!")
+
+###Java - comando de saída: System.out.println
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+	}
+}
+###C# - comando de saída: Console.WriteLine
+using System;
+class HelloWorld {
+  static void Main() {
+    Console.WriteLine("Hello World");
+  }
+}

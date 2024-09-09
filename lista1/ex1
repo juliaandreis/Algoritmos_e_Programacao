@@ -1,20 +1,20 @@
-##Questão 1:
-###
-
-###Python - comando de saída: print
-print("Olá Mundo!")
-
-###Java - comando de saída: System.out.println
+Java - comando de saída: System.out.println
 public class Main
 {
 	public static void main(String[] args) {
 		System.out.println("Hello World");
 	}
 }
-###C# - comando de saída: Console.WriteLine
+
+
+C# - comando de saída: Console.WriteLine
 using System;
 class HelloWorld {
   static void Main() {
     Console.WriteLine("Hello World");
   }
 }
+
+
+Python - comando de saída: print
+print("Olá Mundo!")

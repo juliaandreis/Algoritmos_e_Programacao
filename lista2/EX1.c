@@ -1,3 +1,8 @@
+
+/*Faça um algoritmo que leia uma quantidade de tempo em minutos e escreva o tempo
+equivalente em segundos na tela.
+*/
+
 #include <stdio.h>
 
 int main()

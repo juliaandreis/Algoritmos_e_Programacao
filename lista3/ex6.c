@@ -9,7 +9,7 @@ que o programa venceu*/
 
 int main()
 {
-    char paridade;
+    char paridade[5];
     int a,n;
     printf("Você aposta par ou ímpar? ");
     scanf("%s",&paridade);

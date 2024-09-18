@@ -5,17 +5,17 @@
 int main()
 {
     int a;
-    printf("Digite um número: ");
-    scanf("%d",&a);
+    printf("Digite um número inteiro: ");
+    scanf("%d", &a);
 
-    if (a % 3 == 0)
+    if ((a % 3) == 0)
     {
-        printf("%d é divisível por 3.", a);
+        printf("%d é divisível por 3.",a);
     }
     else
     {
-        printf("%d não é divisível por 3.", a);
+        printf("%d não é divisível por 3.",a);
     }
-    
+
     return 0;
 }

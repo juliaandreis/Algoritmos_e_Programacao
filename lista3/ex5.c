@@ -1,5 +1,5 @@
 /*Faça um algoritmo para receber um número qualquer do usuário e informar na tela se é par ou se
-é ímpar..*/
+é ímpar.*/
 
 #include <stdio.h>
 
@@ -9,13 +9,13 @@ int main()
     printf("Digite um número: ");
     scanf("%d",&a);
 
-    if (a % 2 == 0)
+    if ((a % 2) == 0)
     {
         printf("%d é par.",a);
     }
     else
     {
-        printf("%d não é par.",a);
+        printf("%d é ímpar.",a);
     }
     
     return 0;

@@ -1,6 +1,8 @@
 /*Dados não precisam ser tão “quadrados”, ou cúbicos para ser mais exato. Faça um programa que
 simule dados de 4, 6, 8, 10, 12 ou 16 faces (apenas estes valores). Peça para o usuário informar no
-começo do programa quantas faces quer, para depois fazer o sorteio.*/
+começo do programa quantas faces quer, para depois fazer o sorteio.
+
+COM ESTRUTURA IF ELSE*/
 
 #include <stdio.h>
 #include <stdlib.h> // biblioteca da funcao rand()

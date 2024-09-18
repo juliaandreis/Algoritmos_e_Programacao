@@ -1,52 +1,33 @@
 /*Brincadeira do PAR ou ÍMPAR. Pergunte para o usuário se ele aposta em PAR ou ÍMPAR. Depois
-disso, peça para ele digitar um número de 0 a 5 (como se fosse mostrar os dedos da mão. Sorteie
+disso, peça para ele digitar um número de 0 a 5 (como se fosse mostrar os dedos da mão). Sorteie
 um número de 0 a 5 e some com o que o usuário digitou. Se o usuário escolheu PAR e o valor da
 soma for par OU se ele escolheu ÍMPAR e o valor da soma é ímpar, diga que ele venceu. Senão, diga
-que o programa venceu*/
+que o programa venceu.*/
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-    srand (time(0));
-    char paridade;
-    int a,n,resultado;
-    printf("Você aposta par ou ímpar? Digite 'p' para par e 'i' para ímpar: ");
-    scanf("%s",&paridade);
-    printf("Digite um número de 0 a 5: ");
+    int a,b,aleatorio;
+    char parOuImpar[5];
+
+    printf("Você aposta PAR ou ÍMPAR?\n");
+    scanf("%s",&parOuImpar);
+    printf("Digite um número de 1 a 5: ");
     scanf("%d",&a);
 
-    if ((n < 6) && (paridade == 'p' || 'i'))
+    srand((unsigned)time(NULL));
+    aleatorio = 1 + (rand() % 5);
+
+    printf("Eu jogo %d\n",aleatorio);
+    b = a + aleatorio;
+    
+    if (((a + aleatorio)%2) == 0 && strcmp(parOuImpar, 'par') == 0)
     {
-        n = 0 + rand() % (6);
-
-        resultado = n + a;
-
-        printf("Número do oponente = %d.\n", n);
-        printf("Resultado = %d.\n", resultado);
-
-        if (((resultado) % 2 == 0) && paridade == 'p')
-        {
-            printf("Você ganhou!");
-        }
-        else if ((((resultado) % 2 != 0) && paridade == 'i'))
-        {
-            printf("Você ganhou!");
-        }
-        else if (((resultado) % 2 == 0) && paridade == 'i')
-        {
-            printf("Você perdeu!");
-        }
-        else
-        {
-            printf("Você perdeu!");
-        }
-    }
-    else
-    {
-        printf("Você não digitou os dados corretamente. Tente novamente.");
+        printf("%d + %d é par. Você ganhou!", aleatorio,a);
     }
 
     return 0;

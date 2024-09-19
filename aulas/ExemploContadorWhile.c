@@ -9,6 +9,13 @@ int main()
         printf("olá mundo! contador: %d\n", cont);
         cont++; //incrementa o contador (conta = cont + 1). Para diminuir, "cont--"
     }
+    
+    printf("\n");
+    while (cont >= 0)
+    {
+        printf("olá mundo! contador: %d\n", cont);
+        cont--;
+    }
 
     return 0;
 }

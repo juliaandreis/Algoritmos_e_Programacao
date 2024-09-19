@@ -5,29 +5,53 @@ soma for par OU se ele escolheu ÍMPAR e o valor da soma é ímpar, diga que ele
 que o programa venceu.*/
 
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
-#include <string.h>
+#include <time.h>
 
 int main()
 {
-    int a,b,aleatorio;
-    char parOuImpar[5];
-
-    printf("Você aposta PAR ou ÍMPAR?\n");
-    scanf("%s",&parOuImpar);
-    printf("Digite um número de 1 a 5: ");
+    char paridade[5];
+    int a,n;
+    printf("Você aposta par ou ímpar? ");
+    srand (time(0));
+    char paridade;
+    int a,n,resultado;
+    printf("Você aposta par ou ímpar? Digite 'p' para par e 'i' para ímpar: ");
+    scanf("%s",&paridade);
+    printf("Digite um número: ");
+    printf("Digite um número de 0 a 5: ");
     scanf("%d",&a);
 
-    srand((unsigned)time(NULL));
-    aleatorio = 1 + (rand() % 5);
-
-    printf("Eu jogo %d\n",aleatorio);
-    b = a + aleatorio;
-    
-    if (((a + aleatorio)%2) == 0 && strcmp(parOuImpar, 'par') == 0)
+    n = 1 + rand() % (5)
+    if ((n < 6) && (paridade == 'p' || 'i'))
     {
-        printf("%d + %d é par. Você ganhou!", aleatorio,a);
+        n = 0 + rand() % (6);
+
+        resultado = n + a;
+
+        printf("Número do oponente = %d.\n", n);
+        printf("Resultado = %d.\n", resultado);
+
+        if (((resultado) % 2 == 0) && paridade == 'p')
+        {
+            printf("Você ganhou!");
+        }
+        else if ((((resultado) % 2 != 0) && paridade == 'i'))
+        {
+            printf("Você ganhou!");
+        }
+        else if (((resultado) % 2 == 0) && paridade == 'i')
+        {
+            printf("Você perdeu!");
+        }
+        else
+        {
+            printf("Você perdeu!");
+        }
+    }
+    else
+    {
+        printf("Você não digitou os dados corretamente. Tente novamente.");
     }
 
     return 0;

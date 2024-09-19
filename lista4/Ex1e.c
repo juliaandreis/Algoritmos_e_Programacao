@@ -6,15 +6,28 @@
 
 int main()
 {
+    srand (time(0));
     int cont = 1;
     int soma = 0;
     int n;
     float media;
 
+    printf("Digite 15 números:\n");
+
+    /*while (cont < 16)
+    {  
+        printf("%d° número: ", cont);
+        scanf("%d", &n);
+        soma = soma + n;
+        cont++;
+    }*/
+
+    //PARA SORTEAR OS NUMEROS: (PQ NAO TA FUNCIONANDOOOOOO?????????????)
+    
     while (cont < 16)
     {  
-        printf("Digite o %d° número: ", cont);
-        scanf("%d", &n);
+        n = 1 + rand() % (10);
+        printf("%d° número: ", cont);
         soma = soma + n;
         cont++;
     }
@@ -28,4 +41,3 @@ int main()
 
     return 0;
 }
-

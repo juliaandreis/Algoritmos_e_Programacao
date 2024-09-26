@@ -30,36 +30,39 @@ int main()
 			scanf("%d", &taxa);
 			printf("Digite a quantidade de ciclos: ");
 			scanf("%d", &ciclo);
-
+			
+			menu = 0;
+		
 			while (cont <= ciclo)
 			{
 				populacaoFinal = populacaoInicial + (populacaoInicial * taxa / 100);
-				sorteio = 1 + rand () % 20;
-				if (sorteio == 1 || sorteio == 2 || sorteio == 3 || sorteio == 4) // alta temperatura
+				sorteio = 1 + rand () % 100;
+				if (sorteio <= 20) // alta temperatura
 				{
-					populacaoFinal = (float)populacaoFinal * 0,7;
+					populacaoFinal = (float)populacaoFinal * 0.7;
 				}
-				else if (sorteio == 5 || sorteio == 6 || sorteio == 7) // falta de nutrientes
+				else if (sorteio <= 35) // falta de nutrientes
 				{
 					populacaoFinal = (float)populacaoFinal * 0.75;
 				}
-				else if (sorteio == 8 || sorteio == 9) // excesso de umidade
+				else if (sorteio <= 45) // excesso de umidade
 				{
 					populacaoFinal = (float)populacaoFinal * 0.8;
 				}
-				else if (sorteio == 10) // radiacao ultravioleta
+				else if (sorteio <= 50) // radiacao ultravioleta
 				{
 					populacaoFinal = (float)populacaoFinal * 0.5;
 				}
-				else if (sorteio == 11 || sorteio == 12) // condicao favoravel
+				else if (sorteio <= 60) // condicao favoravel
 				{
 					populacaoFinal = (float)populacaoFinal * 1.2;
 				}
 				
-				printf("Ciclo %d = %d\n",cont,populacaoFinal);
+				printf("Ciclo %d = %f\n",cont,populacaoFinal);
 				populacaoInicial = populacaoFinal;
 				cont++;
 			}
+			
 		}
 
 	} while (menu != 2);

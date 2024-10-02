@@ -107,7 +107,8 @@ int main()
 			}
 			
 		}
-
+	printf("\n");
+	printf("Simulacao concluida. Populacao final: %d\n", populacaoFinal);
 	printf("\n");
 
 	} while (menu != 2);

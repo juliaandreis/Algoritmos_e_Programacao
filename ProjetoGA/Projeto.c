@@ -1,4 +1,4 @@
-/*nao ta funcionando o sorteio das condiçoes climaticas ou nao ta entrando na variavel clima*/
+/*O programa faz uma simulação de crescimento bacteriano, levando em consideracao possiveis intemperies.*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -17,7 +17,9 @@ int main()
 	{
 		printf("1 - Nova simulacao\n");
 		printf("2 - Sair do programa\n");
+		printf("Escolha uma opção: ");
 		scanf("%d", &menu);
+		printf("\n");
 
 		if (menu != 1 && menu != 2)
 		{
@@ -32,6 +34,8 @@ int main()
 			printf("Digite a quantidade de ciclos: ");
 			scanf("%d", &ciclo);
 			
+			printf("\n");
+			
 			sorteio = 0;
 			menu = 0;
 			cont = 1;
@@ -44,7 +48,7 @@ int main()
 				if (sorteio <= 20) // alta temperatura
 				{
 					populacaoFinal = (float)populacaoFinal * 0.7;
-					clima = 1; // PQ AQUI E EMBAIXO TA DANDO ERRO????????????????????
+					clima = 1;
 				}
 				else if (sorteio <= 35) // falta de nutrientes
 				{
@@ -66,12 +70,13 @@ int main()
 					populacaoFinal = (float)populacaoFinal * 1.2;
 					clima = 5;
 				}
-
-				if (clima == 0)
+				else
 				{
-					printf("Ciclo %d = %d\n",cont,populacaoFinal);//população final vai ficar como %d ou %f?
+					clima = 0;
 				}
-				else if (clima == 1)
+
+				//saída de dados:
+				if (clima == 1)
 				{
 					printf("Ciclo %d = %d (condição adversa: alta temperatura)\n",cont,populacaoFinal);
 				}
@@ -89,15 +94,21 @@ int main()
 				}
 				else if (clima == 5)
 				{
-					printf("Ciclo %d = %d (condição adversa: condicao favoravel)\n",cont,populacaoFinal);
+					printf("Ciclo %d = %d (condicao favoravel)\n",cont,populacaoFinal);
+				}
+				else
+				{
+					printf("Ciclo %d = %d\n",cont,populacaoFinal);//população final vai ficar como %d ou %f?
 				}
 
-				printf("sorteio: %d\n", sorteio);
+				//printf("sorteio: %d\n", sorteio);
 				populacaoInicial = populacaoFinal;
 				cont++;
 			}
 			
 		}
+
+	printf("\n");
 
 	} while (menu != 2);
 	

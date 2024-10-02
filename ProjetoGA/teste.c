@@ -3,13 +3,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 int main()
 {
 	srand(time(0));
-	int menu,taxa,ciclo,populacaoFinal,populacaoInicial,clima;
+	int menu,taxa,ciclo,populacaoFinal,populacaoInicial;
 	int cont = 1;
 	int sorteio = 0;
+	char clima[30]; // COMO DECLARAR A VARIAVEL VAZIA?
 
 	printf("Bem vindo ao programa de simulacao de crescimento bacteriano!\n");
 
@@ -32,7 +34,6 @@ int main()
 			printf("Digite a quantidade de ciclos: ");
 			scanf("%d", &ciclo);
 			
-			sorteio = 0;
 			menu = 0;
 			cont = 1;
 		
@@ -40,59 +41,43 @@ int main()
 			{
 				populacaoFinal = populacaoInicial + (populacaoInicial * taxa / 100);
 				sorteio = 1 + rand () % 100;
-				
+				printf("sorteio: %d\n", sorteio);
 				if (sorteio <= 20) // alta temperatura
 				{
 					populacaoFinal = (float)populacaoFinal * 0.7;
-					clima = 1; // PQ AQUI E EMBAIXO TA DANDO ERRO????????????????????
+					strcpy(clima, "alta temperatura"); // PQ AQUI E EMBAIXO TA DANDO ERRO????????????????????
 				}
 				else if (sorteio <= 35) // falta de nutrientes
 				{
 					populacaoFinal = (float)populacaoFinal * 0.75;
-					clima = 2;
+					strcpy(clima, "falta de nutrientes");
 				}
 				else if (sorteio <= 45) // excesso de umidade
 				{
 					populacaoFinal = (float)populacaoFinal * 0.8;
-					clima = 3;
+					strcpy(clima, "excesso de umidade");
 				}
 				else if (sorteio <= 50) // radiacao ultravioleta
 				{
 					populacaoFinal = (float)populacaoFinal * 0.5;
-					clima = 4;
+					strcpy(clima, "radiacao ultravioleta");
 				}
 				else if (sorteio <= 60) // condicao favoravel
 				{
 					populacaoFinal = (float)populacaoFinal * 1.2;
-					clima = 5;
+					strcpy(clima, "condicao favoravel");
 				}
 
-				if (clima == 0)
+				if (clima != "\0")// acho que isso ta errado
+        
 				{
 					printf("Ciclo %d = %d\n",cont,populacaoFinal);//população final vai ficar como %d ou %f?
 				}
-				else if (clima == 1)
+				else if
 				{
-					printf("Ciclo %d = %d (condição adversa: alta temperatura)\n",cont,populacaoFinal);
+					printf("Ciclo %d = %d (condição adversa: %s)\n",cont,populacaoFinal, clima);
 				}
-				else if (clima == 2)
-				{
-					printf("Ciclo %d = %d (condição adversa: falta de nutrientes)\n",cont,populacaoFinal);
-				}
-				else if (clima == 3)
-				{
-					printf("Ciclo %d = %d (condição adversa: excesso de umidade)\n",cont,populacaoFinal);
-				}
-				else if (clima == 4)
-				{
-					printf("Ciclo %d = %d (condição adversa: radiacao ultravioleta)\n",cont,populacaoFinal);
-				}
-				else if (clima == 5)
-				{
-					printf("Ciclo %d = %d (condição adversa: condicao favoravel)\n",cont,populacaoFinal);
-				}
-
-				printf("sorteio: %d\n", sorteio);
+				
 				populacaoInicial = populacaoFinal;
 				cont++;
 			}

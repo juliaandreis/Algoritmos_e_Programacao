@@ -5,8 +5,9 @@
 int main()
 {
     srand(time(0));
-    int a,b,c,e,f;
+    int a,b,c,e;
     float d;
+    char f;
 
     printf("a) Sorteia um número entre 130 e 670:\n");
     
@@ -30,7 +31,13 @@ int main()
 
     printf("e) Sorteia um número entre 0 e 100, que seja múltiplo de 5:\n");
 
-    printf("f) Sorteia um número entre 'A' (65) e 'Z' (90):\n");
+    e = (0 + rand() % 20) * 5;
+    printf("%d\n",e);
+
+    printf("f) Sorteia um caracter entre 'A' (65) e 'Z' (90):\n");
+
+    f = ('A' + rand() % ('Z'-'A'+1));
+    printf("%c\n",f);
 
     return 0;
 }

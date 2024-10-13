@@ -16,7 +16,6 @@ int main()
     
     printf("Você aposta par ou ímpar? Digite 'p' para par e 'i' para ímpar: ");
     scanf("%s",&paridade);
-    printf("Digite um número: ");
     printf("Digite um número de 0 a 5: ");
     scanf("%d",&a);
 

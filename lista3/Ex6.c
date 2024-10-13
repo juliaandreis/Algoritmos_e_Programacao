@@ -10,10 +10,10 @@ que o programa venceu.*/
 
 int main()
 {
+    srand (time(0));
     char paridade;
     int a,n,resultado;
-    srand (time(0));
-
+    
     printf("Você aposta par ou ímpar? Digite 'p' para par e 'i' para ímpar: ");
     scanf("%s",&paridade);
     printf("Digite um número: ");

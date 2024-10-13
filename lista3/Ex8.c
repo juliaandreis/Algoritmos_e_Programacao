@@ -24,7 +24,7 @@ int main()
         venda = produto * 1,35;
     }
 
-    printf("O valor de venda do produto é R$%.2f.",venda);
+    printf("O valor de venda do produto é R$%.2f",venda);
 
     return 0;
 }

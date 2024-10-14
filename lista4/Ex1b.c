@@ -4,6 +4,12 @@
 
 int main ()
 {
+    int cont = 20;
+    while (cont <= 50)
+    {
+        printf("%d\n", cont);
+        cont ++;
+    }
 
     return 0;
 }

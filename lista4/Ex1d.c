@@ -4,6 +4,15 @@
 
 int main ()
 {
+    int cont = 95;
+    while (cont >= 25)
+    {
+        if (cont % 2 != 0)
+        {
+            printf("%d\n", cont);
+        }
+        cont --;
+    }
 
     return 0;
 }

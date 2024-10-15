@@ -5,6 +5,7 @@ estiver aprovado, escrever “APROVADO”, caso contrário escrever “REPROVADO
 média geral dos alunos.*/
 
 #include <stdio.h>
+#include <ctype.h>
 
 int main()
 {
@@ -17,13 +18,13 @@ int main()
    
     for (int cont = 1; cont <= n; cont++)
     {
-        printf("\nDigite a nota do Grau A: ");
+        printf("%d° Aluno:\n",cont);
+        printf("Digite a nota do Grau A: ");
         scanf("%f", &ga);
         printf("Digite a nota do Grau B: ");
         scanf("%f", &gb);
 
         media = (ga + 2 * gb) / 3;
-        printf("\n");
 
         if(media >= 6)
         {
@@ -37,8 +38,7 @@ int main()
             getchar();
             scanf("%c", &substituir);
             substituir = toupper(substituir);
-            printf("\n");
-
+            
             if (substituir == 'a')
             {
                 media = (gc + 2 * gb) / 3;
@@ -48,15 +48,15 @@ int main()
                 media = (ga + 2 * gc) / 3;
             }
 
-            if(media >= 6)
-            {
-                printf("APROVADO");
-            }
-            else
+            if(media < 6)
             {
                 printf("REPROVADO");
             }
-            
+            else 
+            {
+                printf("APROVADO");
+            }
+            printf("\n");
         }
         medias = medias + media;
 

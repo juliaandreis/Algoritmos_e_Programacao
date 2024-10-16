@@ -23,7 +23,5 @@ int main()
 
     } while (n <= meses);
     
-
-
     return 0;
 }

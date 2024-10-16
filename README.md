@@ -1,4 +1,4 @@
 # Algoritmos e Programação
 Repositório destinado à postagem de atividades da Julia Renata Andreis.
 
-A resolução das listas de exercício se encontra na pasta 'EXERCICIOS'.
+As resoluções das listas de exercícios se encontram na pasta 'EXERCICIOS'.

@@ -10,6 +10,26 @@ c) Ao final, exiba o número total de medições que geraram um alerta.*/
 
 int main()
 {
+    int poluicao, alerta = 0;
+    float media = 0;
+
+    printf("Digite o resultado das medições de poluição registradas a cada 3 horas:\n");
+    for(int cont = 1; cont <= 8; cont++)
+    {
+        printf("Medição %d: ", cont);
+        scanf("%d", &poluicao);
+        if(poluicao > 150)
+        {
+            printf("ALERTA! Poluição acima do esperado.\n");
+            alerta = alerta + 1;
+        }
+        media = (float)media + poluicao;
+    }
+
+    media = media / 8;
+    printf("\n");
+    printf("A média de poluição diária foi de %.1f ppm\n", media);
+    printf("Foram registradas %d medições que geraram alerta.", alerta);
 
     return 0;
 }

@@ -7,6 +7,23 @@ e exiba a população ao final de cada mês, considerando a migração*/
 
 int main()
 {
-    int inicial, final;
+    int inicial, final, meses, n = 1;
+
+    printf("Digite a população inicial de abelhas: ");
+    scanf("%d", &inicial);
+    printf("Digiter a quantidade de meses a analisar: ");
+    scanf("%d", &meses);
+
+    do
+    {
+        final = inicial * 2 * 0.97;
+        printf("%d° mês: %d abelhas.\n", n,final);
+        inicial = final;
+        n++;
+
+    } while (n <= meses);
+    
+
+
     return 0;
 }

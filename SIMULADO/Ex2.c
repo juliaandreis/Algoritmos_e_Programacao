@@ -36,7 +36,7 @@ int main()
 
     printf("f) Sorteia um caracter entre 'A' (65) e 'Z' (90):\n");
 
-    f = ('A' + rand() % ('Z'-'A'+1));
+    f = ('A' + rand() % ('Z' - 'A' + 1));
     printf("%c\n",f);
 
     return 0;

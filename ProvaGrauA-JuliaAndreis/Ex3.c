@@ -27,7 +27,7 @@ int main()
     media = (float)total / 5;
     printf("\n");
     printf("O deslocamento total foi de %d centímetros.\n", total);
-    printf("O meior deslocamento registrado foi de %d centímetros.\n", maior);
+    printf("O maior deslocamento registrado foi de %d centímetros.\n", maior);
     printf("A média de deslocamento diário foi de %.1f centímetros.\n", media);
 
     return 0;

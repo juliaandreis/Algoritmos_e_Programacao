@@ -25,7 +25,7 @@ int main()
     printf("\n");
 
     printf("c) Sorteie um número decimal entre 0 e 1 com duas casas decimais.\n");
-    c = (float)(0 + rand() % 101) / 10;
+    c = (float)(rand() % 101) / 100;
     printf("Número sorteado: %.2f\n", c);
     printf("\n");
 

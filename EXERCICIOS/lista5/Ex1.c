@@ -86,13 +86,16 @@ int main ()
 
     //h. Copiar os elementos em ordem inversa para outro vetor.
     int a[10];
+    printf("a[10] = ");
     for(int i = 9; i >= 0; i--)
     {
         for(int x = 0; x < 10; x++)
         {
             a[x] = v[i];
+            printf("%d ", a[x]);
         }
     }
+    
     //i. Crie outros dois vetores com 10 elementos, vPares e vImpares. Copie para vPares todos os
     //elementos pares e para vImpares todos os elementos ímpares. Depois disso, imprima o
     //conteúdo de vPares e vImpares (OBS.: guarde o número de pares e ímpares para poder

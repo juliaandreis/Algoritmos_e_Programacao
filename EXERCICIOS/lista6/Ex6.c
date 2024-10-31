@@ -19,5 +19,22 @@ int main()
         notasAlunos[i][2] = (notasAlunos[i][0] + 2 * notasAlunos[i][1]) / 3.0;
     }
 
+    for(int i=0; i<10; i++)
+    {
+        printf("Aluno %d: ", i);
+        for(int j=0; j<3; j++)
+        {
+            printf("%.1f   ", notasAlunos[i][j]);
+        }
+        if(notasAlunos[i][2] >= 6.0)
+        {
+            printf("APROVADO\n");
+        }
+        else
+        {
+            printf("REPROVADO\n");
+        }
+    }
+
     return 0;
 }

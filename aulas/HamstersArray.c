@@ -3,7 +3,8 @@
 #include <time.h>
 #include <stdbool.h> //para usar o tipo booleano (bool)
 
-const int MAX = 5;
+const int MAX = 5; // consntante não da pra mudar o valor no meio do codigo, diferente de uma variável
+// por isso pode ser usada para definir o tamanho de um array
 
 int main()
 {

@@ -13,7 +13,7 @@ int main ()
     
     while (cont <= 20)
     {
-        n = (1 + rand() % 20) - 10;
+        n = (rand() % 20) - 10;
         printf("%d) %d\n", cont, n); 
         if (n < 0)
         {

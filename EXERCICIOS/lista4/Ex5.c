@@ -37,7 +37,7 @@ int main()
             printf("Qual nota deseja substituir? Digite A para Grau A e B para Grau B: ");
             getchar();
             scanf("%c", &substituir);
-            substituir = toupper(substituir);
+            substituir = tolower(substituir);
             
             if (substituir == 'a')
             {
